@@ -58,7 +58,6 @@ export default Vue.extend({
 
                 // successfully initialized
             } catch (error) {
-              console.error(error);
                 if (error.name === 'NotAllowedError') {
                     // user denied camera access permisson
                 } else if (error.name === 'NotFoundError') {

@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
-        QR Code scanner
+        QRcode scanner
         <!-- <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
