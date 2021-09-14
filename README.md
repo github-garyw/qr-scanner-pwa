@@ -1,5 +1,5 @@
 # qr-scanner-pwa
-
+Vue + Typescript + Vuetify
 ## Project background
 QR Code reader Apps require too many permission and lots of adv, a simple PWA to replace without installation. :-)
 
