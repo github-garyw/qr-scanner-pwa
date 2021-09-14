@@ -1,5 +1,8 @@
 # qr-scanner-pwa
 
+## Project background
+QR Code reader Apps require too many permission and lots of adv, a simple PWA to replace without installation. :-)
+
 ## Project setup
 ```
 npm install
