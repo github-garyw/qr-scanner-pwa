@@ -35,20 +35,20 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld />
+      <QrCodeScanner />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import QrCodeScanner from "./components/QrCodeScanner.vue";
 
 export default Vue.extend({
   name: "App",
 
   components: {
-    HelloWorld,
+    QrCodeScanner,
   },
 
   data: () => ({
