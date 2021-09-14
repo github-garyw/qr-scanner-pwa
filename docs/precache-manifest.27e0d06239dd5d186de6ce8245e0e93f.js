@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c921c315b62837010b31",
-    "url": "/qr-scanner-pwa/css/app.06483a7a.css"
+    "revision": "d8956330a3dc8bc2c500",
+    "url": "/qr-scanner-pwa/css/app.e46a6cbe.css"
   },
   {
-    "revision": "add4d06efb864d01420e",
+    "revision": "3efeb1a1683fc9f1f5f9",
     "url": "/qr-scanner-pwa/css/chunk-vendors.4fd53eed.css"
   },
   {
-    "revision": "84484666808827dff0bcbc92af30f5f3",
+    "revision": "faff743c4f1701010763957bb1565136",
     "url": "/qr-scanner-pwa/index.html"
   },
   {
-    "revision": "c921c315b62837010b31",
-    "url": "/qr-scanner-pwa/js/app.dd11f9de.js"
+    "revision": "d8956330a3dc8bc2c500",
+    "url": "/qr-scanner-pwa/js/app.a59273f9.js"
   },
   {
-    "revision": "add4d06efb864d01420e",
-    "url": "/qr-scanner-pwa/js/chunk-vendors.70d759be.js"
+    "revision": "3efeb1a1683fc9f1f5f9",
+    "url": "/qr-scanner-pwa/js/chunk-vendors.115c3a43.js"
   },
   {
     "revision": "66a9835583c321266a3c4d3e163d105e",

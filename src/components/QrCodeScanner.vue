@@ -8,9 +8,9 @@
         </v-col>
 
         <v-col class="mb-5" cols="12">
-            <v-row justify="center">
+            <v-row justify="center" class="text-row">
                 <p class="error">{{ error }}</p>
-                <v-textarea outlined name="input-7-4" :label="hints" :value="result" class="btn"></v-textarea>
+                <v-textarea outlined dense auto-grow rows=1 name="input-7-4" :label="hints" :value="result" class="btn"></v-textarea>
             </v-row>
             <v-row justify="center">
                 <v-btn class="primary btn" @click="onCopy">Copy</v-btn>
@@ -103,7 +103,16 @@ export default class QrCodeScanner extends Vue {
 <style scoped>
 .cam {
     background-color: aquamarine;
-    margin: 5%;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    max-height: 50%;
+}
+
+.text-row {
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90% !important;
 }
 
 .btn {
