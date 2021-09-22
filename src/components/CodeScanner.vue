@@ -3,7 +3,9 @@
     <v-row class="text-center">
         <v-col class="mb-5" cols="12">
             <v-row justify="center">
-                <qrcode-stream @decode="onDecode" @init="onInit" class="cam" />
+                <div class="cam">
+                    <video ref="scanner" />
+                </div>
             </v-row>
         </v-col>
 
@@ -26,21 +28,45 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import {
-    QrcodeStream
-} from 'vue-qrcode-reader';
+    BrowserMultiFormatReader,
+    Exception
+} from "@zxing/library";
 
 @Component({
-    name: 'QrCodeScanner',
-    components: {
-        QrcodeStream
-    }
+    name: 'CodeScanner',
+    components: {}
 })
-export default class QrCodeScanner extends Vue {
+export default class CodeScanner extends Vue {
 
     result = '';
     error = '';
     popup = '';
     hints = '';
+    isLoading = true;
+    codeReader = new BrowserMultiFormatReader();
+    isMediaStreamAPISupported = navigator && navigator.mediaDevices && "enumerateDevices" in navigator.mediaDevices
+
+    $refs!: {
+        scanner: HTMLVideoElement
+    }
+
+    mounted() {
+        console.log('mounted');
+        if (!this.isMediaStreamAPISupported) {
+            let msg = "Media Stream API is not supported";
+            alert(msg);
+            throw new Exception(msg);
+        }
+        this.codeReader.decodeFromVideoDevice(
+            null,
+            this.$refs.scanner,
+            (result, err) => {
+                if (result) {
+                    this.onDecode(result.getText());
+                }
+            }
+        );
+    }
 
     onDecode(decodeString: string) {
         console.log(`onDecode ${decodeString}`);
@@ -69,43 +95,15 @@ export default class QrCodeScanner extends Vue {
         window.open(this.result);
     }
 
-    async onInit(promise: any) {
-        // show loading indicator
-
-        try {
-            const {
-                capabilities
-            } = await promise
-
-            // successfully initialized
-        } catch (error) {
-            console.error(error);
-            if (error.name === 'NotAllowedError') {
-                // user denied camera access permisson
-            } else if (error.name === 'NotFoundError') {
-                // no suitable camera device installed
-            } else if (error.name === 'NotSupportedError') {
-                // page is not served over HTTPS (or localhost)
-            } else if (error.name === 'NotReadableError') {
-                // maybe camera is already in use
-            } else if (error.name === 'OverconstrainedError') {
-                // did you requested the front camera although there is none?
-            } else if (error.name === 'StreamApiNotSupportedError') {
-                // browser seems to be lacking features
-            }
-        } finally {
-            // hide loading indicator
-        }
-    }
 }
 </script>
 
 <style scoped>
 .cam {
-    background-color: aquamarine;
+    background-color: white;
     margin-top: 5%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
     max-height: 50%;
 }
 
@@ -118,4 +116,10 @@ export default class QrCodeScanner extends Vue {
 .btn {
     margin: 1%;
 }
+
+video {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 </style>

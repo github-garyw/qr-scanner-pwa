@@ -2,25 +2,25 @@
   <v-app>
     <v-app-bar app color="primary" dark dense>
       <div class="d-flex align-center">
-        QR Code scanner
+        Code scanner
       </div>
     </v-app-bar>
 
     <v-main>
-      <QrCodeScanner />
+      <CodeScanner />
     </v-main>
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import QrCodeScanner from "./components/QrCodeScanner.vue";
+import CodeScanner from "./components/CodeScanner.vue";
 
 export default Vue.extend({
   name: "App",
 
   components: {
-    QrCodeScanner,
+    CodeScanner,
   },
 
   data: () => ({
