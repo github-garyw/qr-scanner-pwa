@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3cc7218dfec60bee531b",
-    "url": "/qr-scanner-pwa/css/app.2c04f3b8.css"
+    "revision": "824bd256544a5743454f",
+    "url": "/qr-scanner-pwa/css/app.c4e48ea5.css"
   },
   {
     "revision": "323d5bd3feca0be0faf6",
     "url": "/qr-scanner-pwa/css/chunk-vendors.4fd53eed.css"
   },
   {
-    "revision": "e57bd0bdf007c637b52c9033a7828314",
+    "revision": "51efe391304036fc71d944ebbfe34163",
     "url": "/qr-scanner-pwa/index.html"
   },
   {
-    "revision": "3cc7218dfec60bee531b",
-    "url": "/qr-scanner-pwa/js/app.953470af.js"
+    "revision": "824bd256544a5743454f",
+    "url": "/qr-scanner-pwa/js/app.0f0916ba.js"
   },
   {
     "revision": "323d5bd3feca0be0faf6",

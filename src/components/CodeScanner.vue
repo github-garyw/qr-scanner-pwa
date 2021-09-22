@@ -100,10 +100,10 @@ export default class CodeScanner extends Vue {
 
 <style scoped>
 .cam {
-    background-color: white;
+    background-color: whitesmoke;
     margin-top: 5%;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
     max-height: 50%;
 }
 

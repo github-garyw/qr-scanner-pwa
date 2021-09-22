@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/qr-scanner-pwa/precache-manifest.5d280b08d3285e8ee7ae1bd21e3bc5b6.js"
+  "/qr-scanner-pwa/precache-manifest.592622c571d7d29feb63f706159cb69c.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "qr-scanner-pwa"});
